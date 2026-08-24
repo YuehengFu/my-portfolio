@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Share+Tech+Mono&display=swap');
 
+@font-face {
+  font-family: 'IBM BIOS';
+  src: url('./assets/fonts/IBM_BIOS.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IBM CGAthin';
+  src: url('./assets/fonts/IBM_CGAthin_2y.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --text: #33ff33;
   --text-h: #66ff66;
@@ -8,8 +24,9 @@
   --code-bg: #061006;
 
   --sans: 'Share Tech Mono', ui-monospace, Consolas, monospace;
-  --heading: 'Press Start 2P', ui-monospace, Consolas, monospace;
+  --heading: 'IBM BIOS', 'Press Start 2P', ui-monospace, Consolas, monospace;
   --mono: 'Share Tech Mono', ui-monospace, Consolas, monospace;
+  --cgathin: 'IBM CGAthin', 'Share Tech Mono', ui-monospace, Consolas, monospace;
 
   font: 16px/160% var(--sans);
   letter-spacing: 0.5px;

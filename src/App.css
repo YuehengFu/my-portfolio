@@ -49,6 +49,7 @@ html {
 .nav-links a {
   color: var(--text);
   text-decoration: none;
+  font-family: var(--cgathin);
   font-size: 0.85rem;
   transition: color 0.1s steps(2, jump-end);
 }
@@ -100,6 +101,7 @@ html {
 }
 
 .hero p {
+  font-family: var(--cgathin);
   max-width: 34rem;
   margin: 0;
 }

@@ -10,7 +10,7 @@ import mtac6 from "../assets/experiences/mtac-6.jpg";
 
 const experienceColumns = [
   {
-    role: "Founder",
+    role: "Founder & Product Designer",
     org: "YH Models",
     subtitle: "Original 3D-printed low-poly figurines, designed and sold online. Recieved $3000 grant from city.",
     slides: [
