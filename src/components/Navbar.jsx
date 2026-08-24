@@ -1,11 +1,12 @@
 import { useState } from "react";
+import TypewriterText from "./TypewriterText";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className="navbar">
-      <h2 className="logo">Yueheng Fu</h2>
+      <TypewriterText as="h2" className="logo" text="Yueheng Fu" speed={10} />
       <button
         className="nav-toggle"
         aria-label="Toggle navigation menu"

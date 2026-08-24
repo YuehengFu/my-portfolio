@@ -1,8 +1,10 @@
+import TypewriterText from "./TypewriterText";
+
 function Contact() {
   return (
     <section id="contact" className="contact">
-      <h2>Get In Touch</h2>
-      <p>Feel free to reach out via email or connect on GitHub.</p>
+      <TypewriterText as="h2" text="Get In Touch" speed={14} />
+      <TypewriterText as="p" text="Feel free to reach out via email or connect on GitHub." speed={4} />
       <div className="contact-links">
         <a href="mailto:yueheng.fu@uwaterloo.ca" className="btn">Say Hello</a>
         <a

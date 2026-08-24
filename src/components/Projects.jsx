@@ -1,3 +1,4 @@
+import TypewriterText from "./TypewriterText";
 import impulseGif from "../assets/impulse.gif";
 import vehicleSimGif from "../assets/vehiclesim.gif";
 
@@ -27,15 +28,15 @@ const projectList = [
 function Projects() {
   return (
     <section id="projects" className="projects">
-      <h2>My Projects</h2>
+      <TypewriterText as="h2" text="My Projects" speed={14} />
       <div className="project-grid">
         {projectList.map((project, index) => (
           <div className="project-card" key={index}>
             {project.image && (
               <img src={project.image} alt={`${project.title} gameplay`} className="project-image" />
             )}
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
+            <TypewriterText as="h3" text={project.title} speed={11} />
+            <TypewriterText as="p" text={project.description} speed={4} />
             <ul className="project-tags">
               {project.tags.map((tag) => (
                 <li key={tag}>{tag}</li>

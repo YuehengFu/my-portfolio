@@ -1,7 +1,9 @@
+import TypewriterText from "./TypewriterText";
+
 function Footer() {
   return (
     <footer className="footer">
-      <p>&copy; {new Date().getFullYear()} Yueheng Fu</p>
+      <TypewriterText as="p" text={`© ${new Date().getFullYear()} Yueheng Fu`} speed={6} showCursor={false} />
     </footer>
   );
 }

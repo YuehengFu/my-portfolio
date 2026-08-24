@@ -1,3 +1,4 @@
+import TypewriterText from "./TypewriterText";
 import TikTokEmbed from "./TikTokEmbed";
 import yh1 from "../assets/experiences/yh-1.jpg";
 import yh2 from "../assets/experiences/yh-2.jpg";
@@ -39,14 +40,14 @@ const experienceColumns = [
 function Experiences() {
   return (
     <section id="experiences" className="experiences">
-      <h2>Previous Experiences</h2>
+      <TypewriterText as="h2" text="Previous Experiences" speed={14} />
       <div className="experience-columns">
         {experienceColumns.map((col, index) => (
           <div className="experience-column" key={index}>
             <div className="experience-header">
-              <h3>{col.role}</h3>
-              <p className="experience-org">{col.org}</p>
-              <p className="experience-subtitle">{col.subtitle}</p>
+              <TypewriterText as="h3" text={col.role} speed={11} />
+              <TypewriterText as="p" className="experience-org" text={col.org} speed={6} />
+              <TypewriterText as="p" className="experience-subtitle" text={col.subtitle} speed={3} />
             </div>
             <div className="experience-scroll">
               {col.slides.map((slide, i) =>
