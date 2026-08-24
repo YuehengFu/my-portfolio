@@ -33,6 +33,11 @@ body {
     auto;
 }
 
+a,
+button {
+  cursor: inherit;
+}
+
 #root {
   width: 100%;
   max-width: 1400px;

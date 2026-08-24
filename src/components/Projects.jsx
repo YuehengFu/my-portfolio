@@ -4,7 +4,7 @@ import vehicleSimGif from "../assets/vehiclesim.gif";
 const projectList = [
   {
     title: "Impulse",
-    description: "A Java space shooter from scratch with the Greenfoot library. Artwork handmade in Piskel.",
+    description: "A Java space shooter built from scratch with the Greenfoot library. Artwork handmade in Piskel.",
     image: impulseGif,
     tags: ["Java", "Greenfoot"],
     link: "https://github.com/YuehengFu/Impulse",
