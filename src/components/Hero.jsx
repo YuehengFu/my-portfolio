@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 const LINES = [
   "Hi, I'm Yueheng Fu",
-  'Incoming Systems Design Engineering @University of Waterloo',
+  'First Year Systems Design Engineering @University of Waterloo',
 ];
 const TYPE_SPEED = 40;
 const LINE_PAUSE = 500;

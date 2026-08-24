@@ -239,6 +239,111 @@ html {
   text-decoration: underline;
 }
 
+.experiences {
+  padding: 3rem 1.5rem;
+  text-align: left;
+}
+
+.experience-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.experience-column {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid var(--border);
+  background: var(--bg);
+  transition: border-color 0.1s steps(2, jump-end);
+}
+
+.experience-column:hover {
+  border-color: var(--text);
+}
+
+.experience-header {
+  padding: 1rem 1.25rem;
+  border-bottom: 3px solid var(--border);
+}
+
+.experience-header h3 {
+  font-family: var(--heading);
+  font-size: 0.75rem;
+  line-height: 160%;
+  color: var(--text-h);
+  margin: 0;
+}
+
+.experience-org {
+  font-family: var(--mono);
+  color: var(--text);
+  margin-top: 0.35rem;
+}
+
+.experience-subtitle {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--text);
+  opacity: 0.75;
+  margin-top: 0.5rem;
+}
+
+.experience-scroll {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  height: 420px;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  background: var(--border);
+  scrollbar-width: thin;
+  scrollbar-color: var(--text) var(--bg);
+}
+
+.experience-scroll::-webkit-scrollbar {
+  width: 10px;
+}
+
+.experience-scroll::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+.experience-scroll::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border: 2px solid var(--bg);
+}
+
+.experience-scroll::-webkit-scrollbar-thumb:hover {
+  background: var(--text);
+}
+
+.experience-photo {
+  display: block;
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+.experience-slide {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+  background: var(--bg);
+  scroll-snap-align: start;
+}
+
+.tiktok-iframe {
+  display: block;
+  width: 325px;
+  max-width: 100%;
+  aspect-ratio: 9 / 16;
+  border: none;
+}
+
 .contact {
   text-align: left;
   padding: 3rem 1.5rem;
@@ -259,7 +364,13 @@ html {
   }
 
   .projects,
+  .experiences,
   .contact {
     padding: 2rem 1.25rem;
+  }
+
+  .experience-scroll,
+  .experience-photo {
+    height: 280px;
   }
 }
