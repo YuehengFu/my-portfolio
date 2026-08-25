@@ -7,6 +7,7 @@ import mtac3 from "../assets/experiences/mtac-3.jpg";
 import mtac4 from "../assets/experiences/mtac-4.jpg";
 import mtac5 from "../assets/experiences/mtac-5.jpg";
 import mtac6 from "../assets/experiences/mtac-6.jpg";
+import mtacRecap from "../assets/experiences/mtac-recap.mp4";
 
 const experienceColumns = [
   {
@@ -28,6 +29,7 @@ const experienceColumns = [
     org: "Markham Teen Arts Council",
     subtitle: "Youth division of the Markham Arts Council — organized fundraisers and events across York Region. Generated $8000+ revenue across two years.",
     slides: [
+      { type: "video", src: mtacRecap },
       { type: "image", src: mtac2 },
       { type: "image", src: mtac3 },
       { type: "image", src: mtac4 },
@@ -50,12 +52,26 @@ function Experiences() {
               <TypewriterText as="p" className="experience-subtitle" text={col.subtitle} speed={3} />
             </div>
             <div className="experience-scroll">
-              {col.slides.map((slide, i) =>
-                slide.type === "tiktok" ? (
-                  <div className="experience-slide experience-slide-video" key={i}>
-                    <TikTokEmbed videoId={slide.videoId} />
-                  </div>
-                ) : (
+              {col.slides.map((slide, i) => {
+                if (slide.type === "tiktok") {
+                  return (
+                    <div className="experience-slide experience-slide-video" key={i}>
+                      <TikTokEmbed videoId={slide.videoId} />
+                    </div>
+                  );
+                }
+                if (slide.type === "video") {
+                  return (
+                    <video
+                      src={slide.src}
+                      className="experience-photo"
+                      key={i}
+                      controls
+                      preload="metadata"
+                    />
+                  );
+                }
+                return (
                   <img
                     src={slide.src}
                     alt={`${col.org} ${i + 1}`}
@@ -63,8 +79,8 @@ function Experiences() {
                     key={i}
                     loading="lazy"
                   />
-                )
-              )}
+                );
+              })}
             </div>
           </div>
         ))}
